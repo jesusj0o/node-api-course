@@ -15,7 +15,7 @@ const createItem = async (req, res) => {
   const { body } = req;
   const data = await tracksModel.create(body);
   console.log(data);
-  res.send({ algo: 1 });
+  res.send({data});
 };
 
 const updateItem = (req, res) => {};
