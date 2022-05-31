@@ -7,9 +7,7 @@ const getItems = async (req, res) => {
 
 const getItem = async (req, res) => {
   const { id } = req;
-  console.log(id);
   const data = await tracksModel.findOne(id);
-  console.log(data);
   res.send({ data });
 };
 
