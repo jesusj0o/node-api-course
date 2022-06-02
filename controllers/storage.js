@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { matchedData } = require("express-validator");
 const { storageModel } = require("../models");
 const { handleHttpError } = require("../utils/handleError");
 
@@ -18,6 +19,7 @@ const getItem = async (req, res) => {
     const data = await storageModel.findById(id);
     res.send({ data });
   } catch (error) {
+    console.log(error);
     handleHttpError(res, "ERROR_GET_ITEM_ID");
   }
 };

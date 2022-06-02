@@ -12,6 +12,6 @@ const storage = multer.diskStorage({
     }
 });
 
-const upoadMiddleware = multer({storage}); 
+const uploadMiddleware = multer({storage}); 
 
-module.exports = upoadMiddleware; 
+module.exports = uploadMiddleware; 
